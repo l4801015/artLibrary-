@@ -26,4 +26,4 @@ const todos = [
         completed: false,
     },
 ];
-module.exports = todos;
+export default  todos;

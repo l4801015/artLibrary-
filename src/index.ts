@@ -1,6 +1,5 @@
-
 //app.js
-const http = require("http");
+import * as http from "http";
 const Todo = require("./controller");
 const { getReqData } = require("./utils");
 
@@ -14,7 +13,6 @@ const server = http.createServer(async (req, res) => {
         // set the status code, and content-type
         res.writeHead(200, { "Content-Type": "application/json" });
         // send the data
-        console.log(con)
         res.end(JSON.stringify(todos));
     }
 

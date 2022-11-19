@@ -1,6 +1,6 @@
 // controller.js
 // Logic behind the functionalities
-const data = require("./data");
+import data from "./data";
 
 class Controller {
     // getting all todos
@@ -10,10 +10,10 @@ class Controller {
     }
 
     // getting a single todo
-    async getTodo(id) {
+    async getTodo(id: any) {
         return new Promise((resolve, reject) => {
             // get the todo
-            let todo = data.find((todo) => todo.id === parseInt(id));
+            let todo = data.find((todo: any) => todo.id === parseInt(id));
             if (todo) {
                 // return the todo
                 resolve(todo);
@@ -25,7 +25,7 @@ class Controller {
     }
 
     // creating a todo
-    async createTodo(todo) {
+    async createTodo(todo: any) {
         return new Promise((resolve, _) => {
             // create a todo, with random id and data sent
             let newTodo = {
@@ -39,10 +39,10 @@ class Controller {
     }
 
     // updating a todo
-    async updateTodo(id) {
+    async updateTodo(id: any) {
         return new Promise((resolve, reject) => {
             // get the todo.
-            let todo = data.find((todo) => todo.id === parseInt(id));
+            let todo = data.find((todo: any) => todo.id === parseInt(id));
             // if no todo, return an error
             if (!todo) {
                 reject(`No todo with id ${id} found`);
@@ -55,10 +55,10 @@ class Controller {
     }
 
     // deleting a todo
-    async deleteTodo(id) {
+    async deleteTodo(id: any) {
         return new Promise((resolve, reject) => {
             // get the todo
-            let todo = data.find((todo) => todo.id === parseInt(id));
+            let todo = data.find((todo: any) => todo.id === parseInt(id));
             // if no todo, return an error
             if (!todo) {
                 reject(`No todo with id ${id} found`);
@@ -68,4 +68,4 @@ class Controller {
         });
     }
 }
-module.exports = Controller;
+export default Controller;
