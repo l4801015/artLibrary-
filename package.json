@@ -1,10 +1,32 @@
 {
   "dependencies": {
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "@types/mysql": "^2.15.21"
   },
   "devDependencies": {
+    "@types/node": "^18.11.9",
     "ts-loader": "^9.4.1",
     "typescript": "^4.9.3",
     "webpack-cli": "^5.0.0"
-  }
+  },
+  "name": "art_library",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
+    "pack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l4801015/artLibrary-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/l4801015/artLibrary-/issues"
+  },
+  "homepage": "https://github.com/l4801015/artLibrary-#readme",
+  "description": ""
 }
